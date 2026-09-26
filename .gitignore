@@ -4,6 +4,15 @@ dist/
 *.exe
 .DS_Store
 capture-raw/
+
+# 运行期状态：绝不能进版本库
+#   data/      SQLite（管理员密钥、账号 access/refresh token、请求日志）
+#   runtime/   每账号 materialize 的 HOME（含 .auth/user 凭据、CLI 日志）
+#   node_modules/  根目录依赖（frontend/、worker/ 的已单独列出）
+data/
+runtime/
+node_modules/
+
 docs/PRIVATE_DEPLOYMENT.md
 docs/private/
 docs/capture-notes.md
